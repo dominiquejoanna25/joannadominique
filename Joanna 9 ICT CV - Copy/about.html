@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-about.css">
+    <title>CV - Joanna - About</title>
+</head>
+<body>
+<div id="star-container"></div>
+    <nav class="navbar">
+        <h2>CV - Joanna</h2>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="content-wrapper">
+        <h1 class="main-title">Tentang Saya</h1>
+        <p class="placeholder-text">
+            Aku adalah seorang pelajar yang memiliki minat dalam bidang desain dan sains.<br>
+            Aku senang mempelajari hal-hal baru dan mengembangkan kreativitas melalui hobi aku.<br>
+            Minat dan bakatku adalah menggambar, membuat ilustrasi dan menulis.<br>
+            Aku sudah sedari kecil menggemari hal-hal seni karena untukku seni sangatlah<br>
+            unik dan semua seni memiliki karakternya masing-masing.<br>
+        </p>
+        <p> Menurutku, seni adalah cara menyampaikan pendapat yang sangat kuat<br>
+            karena dalam seni, kita bisa mengekspresikan berbagai perasaan<br>
+            dalam bentuk musik, lukisan ataupun tulisan. Seni adalah ciptaan<br>
+            manusia yang sangat indah dan aku ingin melanjutkannya di masa depan<br>
+            nanti.
+
+        </p>
+
+        <h2 class="sub-title">Hobiku</h2>
+
+<div class="photo-row">
+            <div class="photo-item">
+                <img src="hobi1.jpg" alt="Membaca">
+                <p class="hobi-label">Membaca</p>
+            </div>
+            <div class="photo-item">
+                <img src="hobi2.jpg" alt="Menulis">
+                <p class="hobi-label">Menulis</p>
+            </div>
+            <div class="photo-item">
+                <img src="hobi3.jpg" alt="Sudoku">
+                <p class="hobi-label">Puzzle</p>
+            </div>
+        </div>
+
+<div class="school-section">
+            <h2 class="sub-title">SMA Tujuan</h2> <a href="https://smakkosayu.sch.id" target="_blank">
+                <img src="sekolah.png" alt="Logo Sekolah" class="school-logo">
+            </a>
+            <p class="school-label">SMAK Kosayu</p>
+        </div>
+
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/lIxQe1R5hs0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        
+        <p class="song-title">PinkPantheress - Stateside + Zara Larsson</p>
+
+        <div class="fave-box">
+            <div class="fave-item">
+                <img src="makanan.jpg" alt="Makanan">
+                <p>Makanan favorit</p>
+            </div>
+            <div class="fave-item">
+                <img src="minuman.jpg" alt="Minuman">
+                <p>Minuman favorit</p>
+            </div>
+        </div>
+
+        <p class="quote"><b>"I'm Working On A Masterpiece And I Haven't Quite Finished It Yet"</b><br>Lewis Hamilton</p>
+    </div>
+
+    <div id="flower-trail"></div>
+
+    <script>
+        const trail = document.getElementById("flower-trail");
+        document.addEventListener("mousemove", (e) => {
+            const flower = document.createElement("div");
+            flower.className = "flower";
+            flower.style.left = e.pageX + "px";
+            flower.style.top = e.pageY + "px";
+            trail.appendChild(flower);
+            setTimeout(() => { flower.remove(); }, 800);
+        });
+    </script>
+    <script>
+function createStar() {
+    const container = document.getElementById('star-container');
+    const star = document.createElement('div');
+    star.className = 'star';
+
+    // UKURAN: Kita perbesar ukurannya jadi antara 4px sampai 10px
+    const size = Math.random() * 6 + 4 + 'px'; 
+    star.style.width = size;
+    star.style.height = size;
+
+    // POSISI: Acak dari kiri ke kanan
+    star.style.left = Math.random() * 100 + 'vw';
+
+    // DURASI: Kecepatan jatuh acak (makin kecil angkanya makin cepat)
+    const duration = Math.random() * 4 + 4;
+    star.style.animationDuration = duration + 's';
+
+    // TRANSPARANSI: Agar ada yang terang dan redup (efek kedalaman)
+    star.style.opacity = Math.random() * 0.5 + 0.5; // Minimal 0.5 supaya jelas
+
+    container.appendChild(star);
+
+    // Hapus bintang setelah jatuh
+    setTimeout(() => {
+        star.remove();
+    }, duration * 1000);
+}
+
+// JUMLAH: Kita perkecil angkanya ke 80ms (makin kecil makin banyak bintang)
+setInterval(createStar, 80); 
+</script>
+</body>
+</html>

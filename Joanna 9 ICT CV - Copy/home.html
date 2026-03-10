@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-home.css">
+    <title>CV - Joanna</title>
+</head>
+<body>
+    <div id="star-container"></div>
+    <!-- NAVBAR -->
+    <nav>
+        <h2>CV - Joanna</h2>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="profile-img">
+    <img src="profile.jpeg" alt="profile">
+</div>
+
+
+        <div class="hero-text">
+            <h1>Halo, aku Joanna Dominique!</h1>
+
+
+            <p>Aku seorang <b>Murid SMP di Laurensia Suvarna Sutera</b>
+            <p>Aku berumur 14 tahun dan bercita-cita mengambil jurusan Sastra.<br>
+            Aku memiliki banyak hobi, seperti menggambar, melukis, dan membaca buku.<br>
+            Seni adalah bagian penting dalam kehidupan sehari-hariku karena aku<br>
+            sangat berminat pada apapun yang berbau seni.</p>
+            
+            <p>Aku juga berminat dalam hal literatur. Aku suka membaca buku-buku<br>
+            novel dengan genre misteri dan non-fiksi. Buku favorit aku adalah<br>
+            <b>"1984" karya George Orwell.</b> Sebagai murid, aku selalu berusaha untuk<br>
+            melakukan yang terbaik dalam belajar. Pelajaran yang aku suka<br>
+            adalah Matematika, Fisika, dan Biologi.</p>
+
+
+            <a href="#profile-section" class="btn">Lihat Profil</a>
+        </div>
+        <div id="flower-trail"></div>
+
+<script>
+const trail = document.getElementById("flower-trail");
+
+document.addEventListener("mousemove", (e) => {
+    const flower = document.createElement("div");
+    flower.className = "flower";
+
+    flower.style.left = e.pageX + "px";
+    flower.style.top = e.pageY + "px";
+
+    trail.appendChild(flower);
+
+    setTimeout(() => {
+        flower.remove();
+    }, 800);
+});
+</script>
+    </section>
+<section id="profile-section">
+<h2 class="profile-title-text">Profile Picture</h2>
+<div class="profile-grid">
+<img src="1.jpg" class="profile-card">
+<img src="2.jpeg" class="profile-card">
+<img src="3.jpeg" class="profile-card">
+</div>
+
+</section>
+<script>
+function createStar() {
+    const container = document.getElementById('star-container');
+    const star = document.createElement('div');
+    star.className = 'star';
+
+    // UKURAN: Kita perbesar ukurannya jadi antara 4px sampai 10px
+    const size = Math.random() * 6 + 4 + 'px'; 
+    star.style.width = size;
+    star.style.height = size;
+
+    // POSISI: Acak dari kiri ke kanan
+    star.style.left = Math.random() * 100 + 'vw';
+
+    // DURASI: Kecepatan jatuh acak (makin kecil angkanya makin cepat)
+    const duration = Math.random() * 4 + 4;
+    star.style.animationDuration = duration + 's';
+
+    // TRANSPARANSI: Agar ada yang terang dan redup (efek kedalaman)
+    star.style.opacity = Math.random() * 0.5 + 0.5; // Minimal 0.5 supaya jelas
+
+    container.appendChild(star);
+
+    // Hapus bintang setelah jatuh
+    setTimeout(() => {
+        star.remove();
+    }, duration * 1000);
+}
+
+// JUMLAH: Kita perkecil angkanya ke 80ms (makin kecil makin banyak bintang)
+setInterval(createStar, 80); 
+</script>
+</body>
+</html>

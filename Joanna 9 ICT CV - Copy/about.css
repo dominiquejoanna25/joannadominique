@@ -1,0 +1,147 @@
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #D84797; /* Background Pink Utama */
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #EEE3AB; /* Warna Teks Krem */
+}
+
+/* NAVBAR - Menjamin Sejajar Horizontal */
+.navbar {
+    background-color: #EEE3AB; /* Warna Krem */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    width: 100%;
+}
+
+.nav-brand {
+    color: #D84797;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #D84797;
+    margin-left: 25px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+}
+
+/* Wrapper Konten Tengah */
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 10%;
+}
+
+.main-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.placeholder-text {
+    max-width: 700px;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* Tiga Foto Sejajar (Bulat + Hover) */
+.photo-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.photo-item img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Membuat foto bulat seperti referensi */
+    object-fit: cover;
+    border: 4px solid #EEE3AB;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.photo-item img:hover {
+    transform: scale(1.15) rotate(5deg);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Sekolah Section */
+.school-section {
+    margin-bottom: 50px;
+}
+
+.school-logo {
+    width: 120px;
+    transition: 0.3s;
+}
+
+.school-label {
+    color: #EEE3AB; /* Warna Krem sesuai permintaan */
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* YouTube Section */
+.video-container {
+    width: 100%;
+    max-width: 560px;
+    margin-bottom: 60px;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 315px;
+    border: 5px solid #EEE3AB;
+    border-radius: 15px;
+}
+
+/* Container Makanan & Minuman */
+.fave-box {
+    background-color: #EEE3AB; /* Container Krem */
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 40px;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 50px;
+}
+
+.fave-item img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.fave-item p {
+    color: #D84797; /* Teks Pink di dalam Container Krem */
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 1.1rem;
+}
+
+/* Quotes */
+.quote {
+    font-style: italic;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 50px;
+}
